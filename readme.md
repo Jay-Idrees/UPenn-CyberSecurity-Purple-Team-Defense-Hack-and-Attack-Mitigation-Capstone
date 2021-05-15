@@ -7,7 +7,7 @@
 
 - Initially a **Blue Team Defenses** is configured in Kibana to generate alerts in the setting of an attack, which can be tested on 'beats' received from an ELK Stack server
 
-- The two servers (Target 1, Target 2) are vulnerable and a **Red Team Penetration** testing with Kali VM is performed to attack these two targets using the principals of engagement 
+- The two servers (Target 1, Target 2) are vulnerable and a **Red Team Penetration Testing** with Kali VM is performed to attack these two targets using the principals of engagement 
     - Information gathering
     - Scanning and enumeration
     - Exploitation

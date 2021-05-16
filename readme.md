@@ -51,7 +51,7 @@
 ![](images/index-pattern.png) 
 ![](images/index-pattern2.png) 
 
-
+- Then finally, specifying the index pattern of "watcher_history" in discover
 
 
 ## Red Team Penetration Testing - In Kali VM

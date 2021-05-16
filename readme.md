@@ -22,7 +22,11 @@
 
 ## Blue Team Defenses
 
+- The network is configured behind a jumb-box and a firewall in defense against the external traffic
 
+- Three alerts were configured to alert SOC Analysts to detect suspicious activity conerning for a potential attack, which are then tested during the red team penetration testing phase.
+
+1. 
 
 
 

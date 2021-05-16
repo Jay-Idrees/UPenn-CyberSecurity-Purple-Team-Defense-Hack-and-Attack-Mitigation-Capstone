@@ -24,6 +24,8 @@
 
 - The network is configured behind a jumb-box and a firewall in defense against the external traffic
 
+- All alerts are configured using the Kibana Software in ELK Stack `192.168.1.100:5601`
+
 - Three alerts were configured to alert SOC Analysts to detect suspicious activity conerning for a potential attack, which are then tested during the red team penetration testing phase. To prevent false positives and negatives I have chosen a threshold to be above 400 in the past 5 minutes
 
 1. Configuring alert for alarm when there are an abnormally high number of HTTP errors, as can be the case in the setting of brute force attacks when the hackers may attempt to crack logins

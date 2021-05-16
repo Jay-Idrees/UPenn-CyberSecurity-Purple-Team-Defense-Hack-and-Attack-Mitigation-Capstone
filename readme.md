@@ -65,10 +65,10 @@
 ![](images/ifconfig.png) 
 
 - `netdiscover -r 192.168.1.255/16` reveals the additional IP addresses in the network such as
-    Target 1:
-    Target 2:
-    ELK Stack:
-    Capstone:
-    Gateway: 
+    - Target 1: `192.168.1.110`
+    - Target 2: `192.168.1.115`
+    - ELK Stack: `192.168.1.100` This we already know from when we configured alerts in Kibana
+    - Capstone: `192.168.1.105` We can confirm that this is capstone by checking hyper V or accessing the terminal in Capstone and using ifconfig
+    - Gateway: `192.168.1.1` This is usually a default IP for gateways/routers
 
 ![](images/netdiscover.png) 

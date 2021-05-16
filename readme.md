@@ -80,8 +80,9 @@
 
 Getting information about open ports using nmap for all hosts in the range of IP addresses of the targets
 
-- `nmap -sV 192.168.1.110-115`
+- `nmap -sV 192.168.1.110-115` Note that the range 110-115 is specified, this contains Target 1, Target 2 and ELK stack - so that the scan is completed faster
 
+![](images/nmapscan.png) 
 
 - Finding out the File directory structure, open ports and IP addresses
 
@@ -108,7 +109,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `getid`, `getwd`, `sysinfo`, `ifconfig`, or `ls`, `pwd` if there is shell
 
-- At this point we can also search for the files contining the name `find -name flag.txt 2>dev/null` or `find -type f -iname ‘flag*’`
+- At this point you can also search for the files contining the name flag `find -name flag.txt 2>dev/null` or `find -type f -iname ‘flag*’`
 
 
 > Accessing the MYSQL database using the root user

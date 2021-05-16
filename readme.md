@@ -56,10 +56,12 @@
 ![](images/watcher-discover.png) 
 
 
-## Red Team Penetration Testing - In Kali VM
+## Red Team Penetration Testing - Using Kali VM
 
 **`1) Information gathering`**
 
-- `ifconfig` to reveal the Kali VM Ip address and the Network range
+- `ifconfig` to reveal the Kali VM Ip address and the Network range. This informs us that the Kali VM IP address is: 
+
+![](images/ifconfig.png) 
 
 - `netdiscover -r 

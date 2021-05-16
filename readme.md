@@ -82,7 +82,6 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `nmap -sV 192.168.1.110-115`
 
-> **Hacking `Target 1:`** 
 
 - Finding out the File directory structure, open ports and IP addresses
 
@@ -93,6 +92,10 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - `wpscan --url http://192.168.1.110/wordpress -eu` This will reveal the users
 
 
+
+### `3) Exploitation Phase I - Hacking Target 1 VM`
+
+
 - As we know that the ssh ports are open so we can SSH to Michael's account
 
 - `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it an then SSH again
@@ -101,4 +104,8 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ssh michael@192.168.1.10`
 
-- After log in 
+- After log in some basic commands can be run for navigation
+
+- `getid`, `getwd`, `sysinfo`, `ifconfig`, or `ls`, `pwd` if there is shell
+
+- Note that `/var/www/html` is the default root folder of a web server. This default folder is configured in `apache.config` file

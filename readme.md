@@ -78,4 +78,10 @@
 
 ### `2) Scanning and Enumeration`
 
-- 
+> Getting information about open ports using nmap for all hosts in the range of IP addresses of the targets
+
+- `nmap -sV 192.168.1.110-115`
+
+> Hacking Target 1: Determining file structure, OS version and open ports
+
+- `nmap  -sS -A 192.168.1.110

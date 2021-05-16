@@ -60,8 +60,9 @@
 
 **`1) Information gathering`**
 
-- `ifconfig` to reveal the Kali VM Ip address and the Network range. This informs us that the Kali VM IP address is: 
+- `ifconfig` to reveal the Kali VM Ip address and the Network range. This informs us that the Kali VM IP address is: `192.168.1.90`. We also learn about the network ranges as the netmask is 255.255.255.0 which means that only the last 8 bits are variable for the range of IP addresses and using the broadcast (the last IP) of `192.168.1.255` we can deduce the range to be `192.168.1.255/16`
 
 ![](images/ifconfig.png) 
 
 - `netdiscover -r 
+

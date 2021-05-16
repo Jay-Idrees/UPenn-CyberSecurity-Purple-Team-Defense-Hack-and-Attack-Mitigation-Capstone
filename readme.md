@@ -82,6 +82,6 @@
 
 - `nmap -sV 192.168.1.110-115`
 
-> Hacking Target 1: Determining file structure, OS version and open ports
+> **Hacking `Target 1:`** Determining file structure, OS version and open ports
 
 - `nmap  -sS -A 192.168.1.110

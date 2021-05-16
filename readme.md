@@ -125,4 +125,4 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - This reveals the password for root access to the mysql database
 
-- `
+- `mysql -u root -p` to log in to mysql and typing the password

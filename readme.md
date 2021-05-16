@@ -64,5 +64,10 @@
 
 ![](images/ifconfig.png) 
 
-- `netdiscover -r 
+- `netdiscover -r 192.168.1.255/16` reveals the additional IP addresses in the network such as
+    Target 1:
+    Target 2:
+    ELK Stack:
+    Capstone:
+    Gateway: 
 

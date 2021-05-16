@@ -115,3 +115,5 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - While looking for flags you can simply type `ls` to see if there is a flag in the current directory or you can navigate around in directories like:
 
 - `cd /var/www/` and then `cd html`
+
+- Or go directly into the wordpress folder: `cd /var/www/html/wordpress | cat wp-config.php`

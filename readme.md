@@ -28,7 +28,7 @@
 
 1. Configuring alert for alarm when there are an abnormally high number of HTTP errors, as can be the case in the setting of brute force attacks when the hackers may attempt to crack logins
 
-![](images/http-error-alert)
+![](images/http-error-alert.png)
 
 2. Configuring an alert for an alarm when an abnormally high number of bytes have occurred as this can indicate an event of unusual data transfer in the mist of an attack
 

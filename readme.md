@@ -110,10 +110,19 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - At this point we can also search for the files contining the name `find -name flag.txt 2>dev/null`
 
+
+> Accessing the MYSQL database using the root user
+
 - Note that `/var/www/html` is the default root folder of a web server. This default folder is configured in `apache.config` file
 
 - While looking for flags you can simply type `ls` to see if there is a flag in the current directory or you can navigate around in directories like:
 
 - `cd /var/www/` and then `cd html`
 
+- wp-config.php is one of the core files in teh wordpress folder that contains information about the databases, such as root user access username and password
+
 - Or go directly into the wordpress folder: `cd /var/www/html/wordpress | cat wp-config.php`
+
+- This reveals the password for root access to the mysql database
+
+- `

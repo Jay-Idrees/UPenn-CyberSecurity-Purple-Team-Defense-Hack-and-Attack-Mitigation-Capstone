@@ -36,8 +36,9 @@
 
 ![](images/http-size-alert.png) 
 
+3. Configuring an alert for alarm when CPU usage spikes to greater than 50%, such unusual heavy usage can be a marker of an attack and warrants investigation / mitigation
 
-
+![](images/cpu-usage-alert.png) 
 
 
 

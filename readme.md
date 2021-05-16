@@ -58,17 +58,19 @@
 
 ## Red Team Penetration Testing - Using Kali VM
 
-**`1) Information gathering`**
+### `1) Information Gathering`
 
 - `ifconfig` to reveal the Kali VM Ip address and the Network range. This informs us that the Kali VM IP address is: `192.168.1.90`. We also learn about the network ranges as the netmask is 255.255.255.0 which means that only the last 8 bits are variable for the range of IP addresses and using the broadcast (the last IP) of `192.168.1.255` we can deduce the range to be `192.168.1.255/16`
 
 ![](images/ifconfig.png) 
 
 - `netdiscover -r 192.168.1.255/16` reveals the additional IP addresses in the network such as
-    - Target 1: `192.168.1.110`
-    - Target 2: `192.168.1.115`
-    - ELK Stack: `192.168.1.100` This we already know from when we configured alerts in Kibana
-    - Capstone: `192.168.1.105` We can confirm that this is capstone by checking hyper V or accessing the terminal in Capstone and using ifconfig
-    - Gateway: `192.168.1.1` This is usually a default IP for gateways/routers
+    - **Target 1:** `192.168.1.110`
+    - **Target 2:** `192.168.1.115`
+    - **ELK Stack:** `192.168.1.100` This we already know from when we configured alerts in Kibana
+    - **Capstone:** `192.168.1.105` We can confirm that this is capstone by checking hyper V or accessing the terminal in Capstone and using ifconfig
+    - **Gateway:** `192.168.1.1` This is usually a default IP for gateways/routers
+
+- This information was used to create the network diagram above
 
 ![](images/netdiscover.png) 

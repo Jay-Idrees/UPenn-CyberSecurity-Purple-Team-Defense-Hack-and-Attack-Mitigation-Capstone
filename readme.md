@@ -3,7 +3,7 @@
 
 ## Executive Summary
 
-- This project is about a **Network** consisting of two servers, a penetration testing Kali VM and an ELK stack server. The Network architechture is presented below
+- This project is about a **Network** consisting of two servers, a penetration testing Kali VM and an ELK stack server. In addition there is also a capstone machine that is used to test for alerts. The Network architechture is presented below:
 
 ![](images/network.png)
 

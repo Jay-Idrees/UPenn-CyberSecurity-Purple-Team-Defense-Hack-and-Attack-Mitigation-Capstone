@@ -28,7 +28,7 @@
 
 - Three alerts were configured to alert SOC Analysts to detect suspicious activity conerning for a potential attack, which are then tested during the red team penetration testing phase. To prevent false positives and negatives I have chosen a threshold to be above 400 in the past 5 minutes
 
-1. Configuring alert for alarm when there are an abnormally high number of HTTP errors, as can be the case in the setting of brute force attacks when the hackers may attempt to crack logins
+1. Configuring alert for alarm when there are an abnormally high number of HTTP errors, as can be the case in the setting of brute force attacks when the hackers may attempt to crack logins. Note that the indices to query here is defined as `packetbeat` as thats where the http data comes from by default in ELK stack
 
 ![](images/http-error-alert.png)
 
@@ -36,7 +36,7 @@
 
 ![](images/http-size-alert.png) 
 
-3. Configuring an alert for alarm when CPU usage spikes to greater than 50%, such unusual heavy usage can be a marker of an attack and warrants investigation / mitigation
+3. Configuring an alert for alarm when CPU usage spikes to greater than 50%, such unusual heavy usage can be a marker of an attack and warrants investigation / mitigation. Note that the indices to query here is defined as `metricbeat` as thats where the CPU data comes from by default in ELK stack
 
 ![](images/cpu-usage-alert.png) 
 
@@ -52,6 +52,8 @@
 ![](images/index-pattern2.png) 
 
 - Then finally, specifying the index pattern of "watcher_history" in discover
+
+![](images/watcher-discover.png) 
 
 
 ## Red Team Penetration Testing - In Kali VM

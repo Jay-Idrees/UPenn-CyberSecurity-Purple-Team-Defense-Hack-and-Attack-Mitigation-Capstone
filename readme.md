@@ -41,6 +41,9 @@
 ![](images/cpu-usage-alert.png) 
 
 
+- Below is the summary page of all three alerts
+
+![](images/all-alerts.png) 
 
 
 

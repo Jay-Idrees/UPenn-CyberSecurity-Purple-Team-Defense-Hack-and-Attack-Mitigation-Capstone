@@ -34,6 +34,7 @@
 
 2. Configuring an alert for an alarm when an abnormally high number of bytes have occurred as this can indicate an event of unusual data transfer in the mist of an attack
 
+![](images/http-size-alert.png) 
 
 
 

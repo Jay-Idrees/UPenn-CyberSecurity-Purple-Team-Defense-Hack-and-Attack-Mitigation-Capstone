@@ -74,3 +74,8 @@
 - This information was used to create the network diagram above
 
 ![](images/netdiscover.png) 
+
+
+### `2) Scanning and Enumeration`
+
+- 

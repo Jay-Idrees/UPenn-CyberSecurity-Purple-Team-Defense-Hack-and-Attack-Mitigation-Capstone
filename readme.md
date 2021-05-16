@@ -46,6 +46,12 @@
 ![](images/all-alerts.png) 
 
 
+- Once the alerts have been configured. An index pattern is then defined to "watcher_history", this is in essence a standardized format in which the discover queries will present results
+
+![](images/index-pattern.png) 
+![](images/index-pattern2.png) 
+
+
 
 
 ## Red Team Penetration Testing - In Kali VM

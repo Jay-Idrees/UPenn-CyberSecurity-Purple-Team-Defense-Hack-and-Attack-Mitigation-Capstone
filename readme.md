@@ -108,4 +108,10 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `getid`, `getwd`, `sysinfo`, `ifconfig`, or `ls`, `pwd` if there is shell
 
+- At this point we can also search for the files contining the name `find -name flag.txt 2>dev/null`
+
 - Note that `/var/www/html` is the default root folder of a web server. This default folder is configured in `apache.config` file
+
+- While looking for flags you can simply type `ls` to see if there is a flag in the current directory or you can navigate around in directories like:
+
+- `cd /var/www/` and then `cd html`

@@ -78,10 +78,24 @@
 
 ### `2) Scanning and Enumeration`
 
-> Getting information about open ports using nmap for all hosts in the range of IP addresses of the targets
+Getting information about open ports using nmap for all hosts in the range of IP addresses of the targets
 
 - `nmap -sV 192.168.1.110-115`
 
-> **Hacking `Target 1:`** Determining file structure, OS version and open ports
+> **Hacking `Target 1:`** 
 
-- `nmap  -sS -A 192.168.1.110
+- Finding out the File directory structure, open ports and IP addresses
+
+- `nmap  -sS -A 192.168.1.110`
+
+- Using `wpscan` to determine vulnerabilities in wordpress 
+
+- `wpscan --url http://192.168.1.110/wordpress -eu` This will reveal the users
+
+
+- As we know that the ssh ports are open so we can SSH to Michael's account
+
+- `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it an then SSH again
+
+- 
+

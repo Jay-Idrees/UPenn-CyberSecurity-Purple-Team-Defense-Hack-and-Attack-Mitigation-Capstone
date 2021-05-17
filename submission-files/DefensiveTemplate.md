@@ -71,15 +71,15 @@ The logs and alerts generated during the assessment suggest that this network is
 
 ### Vulnerability 1: HTTP Errors
 
-  - **Patch**: Prevent against Brute Force attacks by blocking suspiscious IPs E.g., _install `SSHGuard` with `apt-get install sshguard`_
+  - **Patch**: **`SSHGuard`** Prevent against Brute Force attacks by blocking suspiscious IPs E.g., _install `SSHGuard` with `apt-get install sshguard`_
   - **Why It Works**: `SSHGuard` It uses logging activity to identify users with multiple failed attempts and then temporarily blocks them by putting their ip address in iptables. After a set duration the lock is automatically released. An alternative to `SSHGuard` is `Fail2Ban` package
 
 ### Vulnerability 2: Unreasonable HTTP request size
 
-  - **Patch**: Prevent DOS attacks that exploit Linux vulnerabilities by keeping Linux Security Patches/Kernel up to date E.g., _install `Upgrade kernel` with `apt-get upgrade linux-image-generic` if Ubuntu or `apt-get upgrade kernel`, then `reboot`, this can be used in conjunction with another package `kexec`, `apt-get install kexec tools` to facilitate quicker reboots
+  - **Patch**: **`Kernel upgrade`** Prevent DOS attacks that exploit Linux vulnerabilities by keeping Linux Security Patches/Kernel up to date E.g., _install `Upgrade kernel` with `apt-get upgrade linux-image-generic` if Ubuntu or `apt-get upgrade kernel`, then `reboot`, this can be used in conjunction with another package `kexec`, `apt-get install kexec tools` to facilitate quicker reboots
   - **Why It Works**: It upgrades the OS with the latest security packages to prevent exploitation of vulnerabilities from an outdated software 
 
-## Vulnerability 3: Unreasonable consumption of CPU resources
+### Vulnerability 3: Unreasonable consumption of CPU resources
 
-  - **Patch**: Limit excessive CPU use by a process by setting limits E.g., _install `cpulimit` with `apt-get install cpulimit`_
+  - **Patch**: **`cpulimit`** Limit excessive CPU use by a process by setting limits E.g., _install `cpulimit` with `apt-get install cpulimit`_
   - **Why It Works**: It can set limits on the CPU usage that is found to be consuming excessive CPU by using `top`. It can work in conjunction with the alert. For instance when an alert if fired for CPU usage of more than 50%, SOC analyst is informed, in response the analyst can detect which process is consuming excessive CPU by using top and then set a limit on it by using `cpulimit`. Likewise limits can also be set as default for certain processes.

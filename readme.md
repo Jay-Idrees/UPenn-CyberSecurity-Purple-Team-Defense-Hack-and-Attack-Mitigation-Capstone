@@ -111,13 +111,15 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it while attempting to connect to SSH
 
+> ### Important word lists for password cracking
+
 - It is helpful to know where sample wordlist are in Kali Linux. While working on this project I have learnt that there are at least 3 reference lists that every cybersecurity expert should be familiar with. These lists are composed of commonly used passwords
 
 **1. `ls /usr//share/wordlists/rockyou.txt`**
 
 **2. `ls /usr/share/john/password.lst`**
 
-**3.`/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`** Here the dirbuster directory contains multiple lists, but medium one shown here is just one of the many options
+**3.`ls /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`** Here the dirbuster directory contains multiple lists, but medium one shown here is just one of the many options
 
 - `hydra -l michael -P /usr/share/wordlists/rockyou.txt  ssh://192.168.1.110 -t 4` Here we can also type just the ip alone followed by ssh like: `192.168.1.110 ssh` its equal to `ssh://192.168.1.110`, `-l` is for login, `-P` is for password an `t 4` is the speed. Note that if you do not specify ssh then it will brute force on port 80 which is meant for http and will be incorrect
 
@@ -140,7 +142,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/flag2.png) 
 
 
-> ### Accessing the MYSQL database using the root user
+> ### Accessing the MySQL database using the root user
 
 - Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 

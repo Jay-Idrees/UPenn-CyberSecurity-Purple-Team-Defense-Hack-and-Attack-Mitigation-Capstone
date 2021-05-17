@@ -19,7 +19,7 @@ The following machines were identified on the network:
   - **Purpose**: Webserver with write and sudo previlidiges
   - **IP Address**: `192.168.1.115`
 
-  More details about the topology can be seen in the diagram below
+  More details about the topology can be seen in the diagram below, but in summary the Targets 1 and 2 are webservers that are to be configured for system hardening by the Blue team. The Kali VM is the penetration testing machine that will attack the targets to uncover vulnerabilities. ELK-Stack is the VM configured for receiving beats from the targets to determine whether the alerts are working effectively for their intended purposes. Finally, Capstone is another VM designed to test alerts
 
   ![](../images/network.png)
 
@@ -33,27 +33,27 @@ Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are pos
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-#### Name of Alert 1
+#### Excessive HTTP Errors
 
 Alert 1 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Metric**: HTTP Errors / http.response.body.bytes
+  - **Threshold**: Above 400 for the last 5 minutes
+  - **Vulnerability Mitigated**: Identification of Brute Force Attacks
+  - **Reliability**: High reliability. Yes, I simultaneously checked while attacking, the alerts were triggered multiple times, but since they were not tied to any response action, no mitigation was performed. I consider this alert to be reliable with acceptable false positives. They were triggered during brute force attacks. 
 
-#### Name of Alert 2
+#### HTTP Request Size Monitor
 Alert 2 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Metric**: http.request.bytes
+  - **Threshold**: Above 3500kb for the last minute
+  - **Vulnerability Mitigated**: Identification of Denial of Service Attacks
+  - **Reliability**: High, similar to as described above
 
-#### Name of Alert 3
+#### CPU Usage Monitor
 Alert 3 is implemented as follows:
-  - **Metric**: TODO
-  - **Threshold**: TODO
-  - **Vulnerability Mitigated**: TODO
-  - **Reliability**: TODO: Does this alert generate lots of false positives/false negatives? Rate as low, medium, or high reliability.
+  - **Metric**: system.process.cpu.total.pct
+  - **Threshold**: Above 50% CPU usage for the last 5 minutes
+  - **Vulnerability Mitigated**: Detection of malacious script overwhelming the system, Resource management
+  - **Reliability**: Medium, was not triggered as often. It is highly variable and relatively non-specific, but can prove to be an effective tool when used in conjuction with other alerts
 
 _TODO Note: Explain at least 3 alerts. Add more if time allows._
 

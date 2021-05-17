@@ -125,7 +125,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/finding-flag.png) 
 
-This informs me that there is a second flag in the directory `var/www/html`. Even if you do not use find, you can manually explore local directories by hit and trial. The flags usually are like "destination" points leading you towrds the final goal. So obviously, this flag's location shortlists where to look for it further. 
+- This informs me that there is a second flag in the directory `var/www/html`. Even if you do not use find, you can manually explore local directories by hit and trial. The flags usually are like "destination" points leading you towrds the final goal. So obviously, this flag's location shortlists where to look for it further. 
 
 ![](images/flag2.png) 
 
@@ -134,15 +134,15 @@ This informs me that there is a second flag in the directory `var/www/html`. Eve
 
 - Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 
+- `wp-config.php` is one of the core files in the wordpress folder that contains information about the databases, such as root user access username and password
 
+- You can check whether the file exists w/o navigating, simply by using ls: `ls /var/www/html/wordpress/wp-config.php`
 
-
-
-- wp-config.php is one of the core files in teh wordpress folder that contains information about the databases, such as root user access username and password
-
-- Or go directly into the wordpress folder: `cd /var/www/html/wordpress | cat wp-config.php`
+- And then you can also direcrly visualize it w/o navigating into the directory `cat /var/www/html/wordpress/wp-config.php`
 
 - This reveals the password for root access to the mysql database
+
+
 
 - `mysql -u root -p` to log in to mysql and typing the password
 

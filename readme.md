@@ -163,6 +163,8 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/michael-pw.png)
 
+### `Post-Exploitation - Phase I for Target 1 VM`
+`
 - `ssh michael@192.168.1.10` for connecting
 
 - After login some basic commands can be run for navigation

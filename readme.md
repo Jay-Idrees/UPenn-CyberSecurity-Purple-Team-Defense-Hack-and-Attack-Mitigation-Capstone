@@ -95,10 +95,12 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `nmap  -sS -A 192.168.1.110`
 
-- Using `wpscan` to determine vulnerabilities in wordpress 
+- Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress
 
 - `wpscan --url http://192.168.1.110/wordpress -eu` This will reveal the users
 
+
+![](images/wpscan1.png) 
 
 
 ### `3) Exploitation Phase I - Hacking Target 1 VM`

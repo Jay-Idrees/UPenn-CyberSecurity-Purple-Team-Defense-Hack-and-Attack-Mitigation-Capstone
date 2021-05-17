@@ -64,7 +64,7 @@
 
 ![](images/ifconfig.png) 
 
-- `netdiscover -r 192.168.1.255/16` reveals the additional IP addresses in the network such as
+- **`netdiscover -r 192.168.1.255/16`** reveals the additional IP addresses in the network such as
     - **Target 1:** `192.168.1.110`
     - **Target 2:** `192.168.1.115`
     - **ELK Stack:** `192.168.1.100` This we already know from when we configured alerts in Kibana
@@ -131,7 +131,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress
 
-- `wpscan --url http://192.168.1.110/wordpress -eu` This will reveal the users
+- **`wpscan --url http://192.168.1.110/wordpress -eu`** This will reveal the users on the wordpress server
 
 
 ![](images/wpscan1.png) 
@@ -197,7 +197,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/mysqlpw.png) 
 
-- Now you can type `mysql -u root -p` in the terminal to log in to mysql and then typing the password
+- Now you can type **`mysql -u root -p`** in the terminal to log in to mysql and then typing the password
 
 ![](images/mysql.png) 
 

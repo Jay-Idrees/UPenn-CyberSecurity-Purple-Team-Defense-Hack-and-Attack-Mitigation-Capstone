@@ -179,14 +179,12 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/flag34-2.png) 
 
 
-
-
 - With the new information gathered, the hashes of the usernames can be accessed and copied into a text file for use by `John the Ripper`
 
 - `nano michael-steven_hashes.txt`
 
-- Once the passwords have been hacked. I can now login as Steven via SSH 
+- Once the passwords have been hacked. You can now login as Steven via SSH while I am still using the terminal for of the user `michael` on target 1. While working on this I realized that I cannot use `michael`s account to crack Steven's hash as the user did not have writing privilidges. So you can either go back and obtain root access or 
 
 - `ssh steven@192.168.1.110`
 
-- Then you can attempt to acquire root access with `sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’` and find flag 4
+- Then you can attempt to acquire root access with `sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’` and find flag 4. This code line is very useful and uses python to switch the terminal priviliges to the root from the current user

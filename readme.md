@@ -140,11 +140,12 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - And then you can also direcrly visualize it w/o navigating into the directory `cat /var/www/html/wordpress/wp-config.php`
 
-
 ![](images/wp-config.php.png) 
 
+- `wp-config.php` contains confidential information regarding the passwords to access 
 
-- This reveals the password for root access to the mysql database
+
+- This reveals the password for root access to the mysql database along with the usernames that have access to it
 
 
 

@@ -145,7 +145,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - `wp-config.php` contains confidential information regarding the passwords to access 
 
 
-- This reveals the password for root access to the MySQL database along with the usernames that have access to it
+- This reveals the password for root access to the MySQL database along with the root user that has access to it
 
 ![](images/mysqlpw.png) 
 

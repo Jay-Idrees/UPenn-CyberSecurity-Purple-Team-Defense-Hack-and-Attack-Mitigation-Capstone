@@ -107,13 +107,21 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - `-w` to reference wordlist
 - `-e` to display expanded mode
 - `-x` for file extensions
-- `dir` for directories 
+- `dir` for directory mode
 - `-u` for URL or domain
 
 
 - I found [**This Link**](https://kalilinuxtutorials.com/gobuster/) about gobuster helpful, so I am referencing it here. It has detaliled information about all the various flags and modes
 
 ![](images/gobuster-services-page.png) 
+
+- Upon inspection of the various webdirectories, the link `http://192.168.1.110/services.html` was found to contain flag 1. This can be done by visiting this link and the right clicking (anywhere on the page) and selecting "source" for by typing `view-source:` before the link:
+
+![](images/flag1-view-source.png)
+
+
+
+
 
 
 - Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress

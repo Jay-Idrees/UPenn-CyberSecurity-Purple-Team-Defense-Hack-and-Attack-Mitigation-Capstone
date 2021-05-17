@@ -140,7 +140,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/flag2.png) 
 
 
-> #### Accessing the MYSQL database using the root user
+> ### Accessing the MYSQL database using the root user
 
 - Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 

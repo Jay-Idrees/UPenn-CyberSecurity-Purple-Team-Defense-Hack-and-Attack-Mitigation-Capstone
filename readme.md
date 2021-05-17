@@ -91,7 +91,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - Both are running Apache 2.4.10 httpd on the http port and Samba smbd 3 on ports 139 and 445
 
-- Another option is usig nmap with the flag `-A` , it offers relatively more accurate picture about the OS versions
+- Another option is using nmap with the flag `-A` , it offers relatively more accurate picture about the OS versions
 
 - **`nmap  -sS -A 192.168.1.110`**
 

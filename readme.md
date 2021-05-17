@@ -95,6 +95,21 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `nmap  -sS -A 192.168.1.110`
 
+
+- Finding directories link to the website. You can use `gobuster` - more convenient; or `dirbuster`, dirbuster is more detailed if you really want to look for all the files on the network specifically
+
+- To install gobuster run `apt-get install gobuster` as shown below
+
+- `gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium dir -e -u http://192.168.1.110 -x .php,txt,html`
+
+- 
+
+
+
+
+
+
+
 - Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress
 
 - `wpscan --url http://192.168.1.110/wordpress -eu` This will reveal the users

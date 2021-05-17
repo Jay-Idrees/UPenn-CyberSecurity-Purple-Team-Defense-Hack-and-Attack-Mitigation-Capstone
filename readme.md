@@ -149,7 +149,11 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/mysqlpw.png) 
 
-- `mysql -u root -p` to log in to mysql and typing the password
+- Now you can type `mysql -u root -p` in the terminal to log in to mysql and then typing the password
+
+
+
+
 
 - After gaining access into the MYSQL server further information can be gathered by typing the following commands
 

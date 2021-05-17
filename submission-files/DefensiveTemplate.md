@@ -76,7 +76,7 @@ The logs and alerts generated during the assessment suggest that this network is
 
 ### Vulnerability 2: Unreasonable HTTP request size
 
-  - **Patch**: **`Kernel upgrade`** Prevent DOS attacks that exploit Linux vulnerabilities by keeping Linux Security Patches/Kernel up to date E.g., _install `Upgrade kernel` with `apt-get upgrade linux-image-generic` if Ubuntu or `apt-get upgrade kernel`, then `reboot`, this can be used in conjunction with another package `kexec`, `apt-get install kexec tools` to facilitate quicker reboots
+  - **Patch**: **`Kernel upgrade`** Prevent DOS attacks that exploit Linux vulnerabilities by keeping Linux Security Patches/Kernel up to date E.g., _install `Upgrade kernel`_ with `apt-get upgrade linux-image-generic` if Ubuntu or `apt-get upgrade kernel`, then `reboot`, this can be used in conjunction with another package `kexec`, `apt-get install kexec tools` to facilitate quicker reboots
   - **Why It Works**: It upgrades the OS with the latest security packages to prevent exploitation of vulnerabilities from an outdated software 
 
 ### Vulnerability 3: Unreasonable consumption of CPU resources

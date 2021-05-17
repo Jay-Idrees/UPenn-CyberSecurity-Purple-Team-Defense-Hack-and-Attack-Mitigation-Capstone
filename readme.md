@@ -234,6 +234,6 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - Then you can attempt to acquire root access with `python.spawn`
 
--  **`sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’`** and find flag 4. This code line is very useful and uses python to switch the terminal priviliges to the root from the current user
+-  **`sudo python -c ‘import pty;pty.spawn(“/bin/bash”);’`** and find flag 4. This code line is very useful and uses python to switch the terminal priviliges to root from the current user
 
 ![](images/flag4.png) 

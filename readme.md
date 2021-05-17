@@ -101,6 +101,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 
 ![](images/wpscan1.png) 
+![](images/users-identified.png) 
 
 
 ### `3) Exploitation Phase I - Hacking Target 1 VM`

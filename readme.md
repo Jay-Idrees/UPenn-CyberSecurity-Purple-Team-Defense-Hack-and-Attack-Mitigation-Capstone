@@ -84,6 +84,13 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/nmapscan.png) 
 
+- The results are similar for both target 1 and target 2. The OS version Apache:
+
+- Both have open ports 80 and 22 which can be exploited
+
+- Both are running Apache 2.4.10 httpd on the http port and Samba smbd 3 on ports 139 and 445
+
+
 - Finding out the File directory structure, open ports and IP addresses
 
 - `nmap  -sS -A 192.168.1.110`

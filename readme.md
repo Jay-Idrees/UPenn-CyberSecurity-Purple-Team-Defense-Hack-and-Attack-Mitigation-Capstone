@@ -111,7 +111,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ssh michael@192.168.1.10` reveals that it requires a password. We can use hydra to brute force it an then SSH again
 
-- `hydra -l michael -P /usr/share/john/password.lst -s 22 -vV 192.168.1.110 http-get`
+- `hydra -l michael -P /usr/share/john/password.lst  192.168.1.110 ssh`
 
 - `ssh michael@192.168.1.10`
 
@@ -128,7 +128,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 > Accessing the MYSQL database using the root user
 
-- Note that `/var/www/html` is the default root folder of a web server. This default folder is configured in `apache.config` file
+- Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 
 - While looking for flags you can simply type `ls` to see if there is a flag in the current directory or you can navigate around in directories like:
 

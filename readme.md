@@ -117,17 +117,15 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 **2. `ls /usr/share/john/password.lst`**
 
-**3.`/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`** Here the dirbuster directory contains multiple lists, but medium one is the one commonly used
+**3.`/usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`** Here the dirbuster directory contains multiple lists, but medium one shown here is just one of the many options
 
+- `hydra -l michael -P /usr/share/wordlists/rockyou.txt  ssh://192.168.1.110 -t 4` Here we can also type just the ip alone followed by ssh like: `192.168.1.110 ssh` its equal to `ssh://192.168.1.110`, `-l` is for login, `-P` is for password an `t 4` is the speed. Note that if you do not specify ssh then it will brute force on port 80 which is meant for http and will be incorrect
 
-- `hydra -l michael -P /usr/share/wordlists/rockyou.txt  ssh://192.168.1.110 -t 4` Here we can also type just the ip alone followed by ssh like: `192.168.1.110 ssh` its equvilant to 
+- I found [**This Link about Hydra**](https://www.linuxfordevices.com/tutorials/linux/hydra-brute-force-ssh) helpful, and so I am sharing as reference
 
-- `ssh michael@192.168.1.10`
+![](images/michael-pw.png)
 
-![](images/hydra1.png) 
-
-- I found [This Link about Hydra](https://www.linuxfordevices.com/tutorials/linux/hydra-brute-force-ssh) helpful, and so I am sharing as reference
-
+- `ssh michael@192.168.1.10` for connecting
 
 - After login some basic commands can be run for navigation
 

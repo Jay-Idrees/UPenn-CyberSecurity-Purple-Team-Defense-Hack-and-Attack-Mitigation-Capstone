@@ -113,7 +113,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - I found [**This Link**](https://kalilinuxtutorials.com/gobuster/) about gobuster helpful, so I am referencing it here. It has detaliled information about all the various flags and modes
 
-
+![](images/gobuster-services-page.png) 
 
 
 - Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress

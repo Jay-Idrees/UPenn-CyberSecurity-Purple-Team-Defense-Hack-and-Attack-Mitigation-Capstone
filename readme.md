@@ -20,7 +20,7 @@
 
 - With all the new information about system wulnerabilities, a final **Purple Team Hardening** is performed against the vulnerabilities discovered during the Red Team penetration testing and the weaknesses identified in the Blue Team Defenses
 
-## Blue Team Defenses
+## Blue Team Defenses : Initial Kibana Alerts Setup
 
 - The network is configured behind a jumb-box and a firewall in defense against the external traffic
 
@@ -117,7 +117,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 ![](images/hydra1.png) 
 
-- After log in some basic commands can be run for navigation
+- After login some basic commands can be run for navigation
 
 - `ifconfig`, or `ls`, `pwd` if there is shell 
 
@@ -139,6 +139,10 @@ Getting information about open ports using nmap for all hosts in the range of IP
 - You can check whether the file exists w/o navigating, simply by using ls: `ls /var/www/html/wordpress/wp-config.php`
 
 - And then you can also direcrly visualize it w/o navigating into the directory `cat /var/www/html/wordpress/wp-config.php`
+
+
+![](images/wp-config.php.png) 
+
 
 - This reveals the password for root access to the mysql database
 

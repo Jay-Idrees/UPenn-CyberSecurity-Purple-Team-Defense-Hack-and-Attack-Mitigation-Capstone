@@ -60,19 +60,25 @@ This alert is implemented as follows:
   - **Vulnerability Mitigated**: Detection of malacious script overwhelming the system, Resource management
   - **Reliability**: Medium, was not triggered as often. It is highly variable and relatively non-specific, but can prove to be an effective tool when used in conjuction with other alerts
 
+![](../images/all-alerts.png)
 
 
-### Suggestions for Going Further (Optional)
+## Suggestions for Going Further (Optional)
 
 - Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
 
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
-- Vulnerability 1
-  - **Patch**: Prevent against Brute Force attacks E.g., _install `SSHGuard` with `apt-get install sshguard`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
-- Vulnerability 2
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
+
+### Vulnerability 1: HTTP Errors
+
+  - **Patch**: Prevent against Brute Force attacks by blocking suspiscious IPs E.g., _install `SSHGuard` with `apt-get install sshguard`_
+  - **Why It Works**: `SSHGuard` It uses logging activity to identify users with multiple failed attempts and then temporarily blocks them by putting their ip address in iptables. After a set duration the lock is automatically released. An alternative to `SSHGuard` is `Fail2Ban` package
+
+### Vulnerability 2: Unreasonable HTTP request size
+
+  - **Patch**: Prevent DOS attacks that exploit Linux vulnerabilities by keeping Linux Security Patches/Kernel up to date E.g., _install `Upgrade kernel` with `apt-get upgrade linux-image-generic` if Ubuntu or `apt-get upgrade kernel`, then `reboot`, this can be used in conjunction with another package `kexec`, `apt-get install kexec tools` to facilitate quicker reboots
+  - **Why It Works**: It upgrades the OS with the latest security packages to prevent exploitation of vulnerabilities from an outdated software 
+
 - Vulnerability 3
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
-  - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
+  - **Patch**: Limit excessive CPU use by a process by setting limits E.g., _install `cpulimit` with `apt-get install cpulimit`_
+  - **Why It Works**: It can set limits on the CPU usage that is found to be consuming excessive CPU by using `top`. It can work in conjunction with the alert. For instance when an alert if fired for CPU usage of more than 50%, SOC analyst is informed, in response the analyst can detect which process is consuming excessive CPU by using top and then set a limit on it by using `cpulimit`. Likewise limits can also be set as default for certain processes.

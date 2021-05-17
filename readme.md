@@ -121,18 +121,21 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ifconfig`, or `ls`, `pwd` if there is shell 
 
-- At this point you can also search for the files contining the name flag `find -name flag.txt 2>dev/null` or `find -type f -iname ‘flag*’`
+- At this point you can also search for the files containing the name flag `find -name flag2.txt 2>dev/null` (the `2>dev/null` instructs to not show erros of permission denied) or `find -type f -iname ‘flag*’`
 
 ![](images/finding-flag.png) 
+
+This informs me that there is a second flag in the directory `var/www/html`. Even if you do not use find, you can manually explore local directories by hit and trial. The flags usually are like "destination" points leading you towrds the final goal. So obviously, this flag's location shortlists where to look for it further. 
+
 
 
 > Accessing the MYSQL database using the root user
 
 - Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 
-- While looking for flags you can simply type `ls` to see if there is a flag in the current directory or you can navigate around in directories like:
 
-- `cd /var/www/` and then `cd html`
+
+
 
 - wp-config.php is one of the core files in teh wordpress folder that contains information about the databases, such as root user access username and password
 

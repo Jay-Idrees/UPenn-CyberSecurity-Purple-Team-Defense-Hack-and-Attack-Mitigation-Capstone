@@ -127,6 +127,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 This informs me that there is a second flag in the directory `var/www/html`. Even if you do not use find, you can manually explore local directories by hit and trial. The flags usually are like "destination" points leading you towrds the final goal. So obviously, this flag's location shortlists where to look for it further. 
 
+![](images/flag2.png) 
 
 
 > Accessing the MYSQL database using the root user

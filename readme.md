@@ -129,7 +129,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - After login some basic commands can be run for navigation
 
-- `ifconfig`, or `ls`, `pwd` if there is shell 
+- `ifconfig`, or `ls`, `pwd` if there is shell
 
 - At this point you can also search for the files containing the name flag `find -name flag2.txt 2>dev/null` (the `2>dev/null` instructs to not show erros of permission denied) or `find -type f -iname ‘flag*’`
 
@@ -140,7 +140,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/flag2.png) 
 
 
-> Accessing the MYSQL database using the root user
+> #### Accessing the MYSQL database using the root user
 
 - Note that `/var/www/html` is the default root folder of a web server and if you want to access confidential files holding credentials for the MySQL server. This default folder is configured in `apache.config` file
 

@@ -171,6 +171,14 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/user-hash.png) 
 
 
+- Likewise inspection of additional tables revealed that the table `wp_posts` actually contains flags 3 and 4
+
+- `select * from wp_posts;` 
+
+![](images/flag34-1.png) 
+![](images/flag34-2.png) 
+
+
 
 
 - With the new information gathered, the hashes of the usernames can be accessed and copied into a text file for use by `John the Ripper`

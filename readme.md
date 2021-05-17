@@ -123,7 +123,7 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 
 
-
+> ### Searching for usernames on the website using WPSCAN or wordpress scan
 
 
 - Using `wpscan` can help provide information regarding potential users and vulnerabiliteis in wordpress

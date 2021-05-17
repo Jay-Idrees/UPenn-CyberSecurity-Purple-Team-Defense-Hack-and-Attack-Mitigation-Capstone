@@ -166,9 +166,9 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/show-sql-table.png) 
 
 
+- `select * from wp_users;` Then you can query  specific table to display. Here I am interested in looking at the users (along with hashes) that have access to the database
 
-
-- `select * from wp_users;` Then you can query  specific table to display
+![](images/user-hash.png) 
 
 
 

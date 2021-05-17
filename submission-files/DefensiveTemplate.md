@@ -33,37 +33,42 @@ Target 1 is an Apache web server and has SSH enabled, so ports 80 and 22 are pos
 
 Traffic to these services should be carefully monitored. To this end, we have implemented the alerts below:
 
-#### Excessive HTTP Errors
+#### Alert 1:  Excessive HTTP Errors
 
-Alert 1 is implemented as follows:
+This alert is implemented as follows:
+
   - **Metric**: HTTP Errors / http.response.body.bytes
   - **Threshold**: Above 400 for the last 5 minutes
   - **Vulnerability Mitigated**: Identification of Brute Force Attacks
   - **Reliability**: High reliability. Yes, I simultaneously checked while attacking, the alerts were triggered multiple times, but since they were not tied to any response action, no mitigation was performed. I consider this alert to be reliable with acceptable false positives. They were triggered during brute force attacks. 
 
-#### HTTP Request Size Monitor
-Alert 2 is implemented as follows:
+#### Alert 2: HTTP Request Size Monitor
+
+This alert is implemented as follows:
+
   - **Metric**: http.request.bytes
   - **Threshold**: Above 3500kb for the last minute
   - **Vulnerability Mitigated**: Identification of Denial of Service Attacks
   - **Reliability**: High, similar to as described above
 
-#### CPU Usage Monitor
-Alert 3 is implemented as follows:
+#### Alert 3: CPU Usage Monitor
+
+This alert is implemented as follows:
+
   - **Metric**: system.process.cpu.total.pct
   - **Threshold**: Above 50% CPU usage for the last 5 minutes
   - **Vulnerability Mitigated**: Detection of malacious script overwhelming the system, Resource management
   - **Reliability**: Medium, was not triggered as often. It is highly variable and relatively non-specific, but can prove to be an effective tool when used in conjuction with other alerts
 
-_TODO Note: Explain at least 3 alerts. Add more if time allows._
+
 
 ### Suggestions for Going Further (Optional)
-_TODO_: 
+
 - Each alert above pertains to a specific vulnerability/exploit. Recall that alerts only detect malicious behavior, but do not stop it. For each vulnerability/exploit identified by the alerts above, suggest a patch. E.g., implementing a blocklist is an effective tactic against brute-force attacks. It is not necessary to explain _how_ to implement each patch.
 
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
 - Vulnerability 1
-  - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_
+  - **Patch**: Prevent against Brute Force attacks E.g., _install `SSHGuard` with `apt-get install sshguard`_
   - **Why It Works**: TODO: E.g., _`special-security-package` scans the system for viruses every day_
 - Vulnerability 2
   - **Patch**: TODO: E.g., _install `special-security-package` with `apt-get`_

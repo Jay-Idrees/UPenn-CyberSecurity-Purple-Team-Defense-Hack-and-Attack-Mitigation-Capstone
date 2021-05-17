@@ -98,14 +98,20 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - Finding directories link to the website. You can use `gobuster` - more convenient; or `dirbuster`, dirbuster is more detailed if you really want to look for all the files on the network specifically
 
-- To install gobuster run `apt-get install gobuster` as shown below
+- To install gobuster run `apt-get install gobuster` - add `sudo` if not the root user, as shown below
 
-- `gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium dir -e -u http://192.168.1.110 -x .php,txt,html`
+- **`gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium dir -e -u http://192.168.1.110 -x .php,txt,html`**
 
-- 
+- Some useful gobuster flags:
+
+- `-w` to reference wordlist
+- `-e` to display expanded mode
+- `-x` for file extensions
+- `dir` for directories 
+- `-u` for URL or domain
 
 
-
+- I found [**This Link**](https://kalilinuxtutorials.com/gobuster/) about gobuster helpful, so I am referencing it here. It has detaliled information about all the various flags and modes
 
 
 

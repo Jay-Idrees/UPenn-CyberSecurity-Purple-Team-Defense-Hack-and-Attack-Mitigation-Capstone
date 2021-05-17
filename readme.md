@@ -121,10 +121,9 @@ Getting information about open ports using nmap for all hosts in the range of IP
 
 - `ifconfig`, or `ls`, `pwd` if there is shell 
 
-![](images/finding-flag.png) 
-
-
 - At this point you can also search for the files contining the name flag `find -name flag.txt 2>dev/null` or `find -type f -iname ‘flag*’`
+
+![](images/finding-flag.png) 
 
 
 > Accessing the MYSQL database using the root user

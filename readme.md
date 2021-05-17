@@ -154,14 +154,18 @@ Getting information about open ports using nmap for all hosts in the range of IP
 ![](images/mysql.png) 
 
 
-
 - After gaining access into the MYSQL server further information can be gathered by typing the following commands
 
-- `show databases`
+- `show databases` to list all the current databases on MySQL server
+
+- Before you can see what tables are inside a database, that specific database name should be invoked. For example here I am interested in looking at the wordpress database which is likely to contain usernmes and their hashes
+
 - `use wordpress`
-- `show tables`
-- `select * from wp_posts`
-- `select * from wp_users`
+- `show tables` Once the database is invoked you can look at what tables are in it
+- `select * from wp_users` Then you can query  specific table to display
+
+
+
 
 - With the new information gathered, the hashes of the usernames can be accessed and copied into a text file for use by `John the Ripper`
 

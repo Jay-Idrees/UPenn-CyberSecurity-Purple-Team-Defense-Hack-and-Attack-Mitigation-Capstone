@@ -72,14 +72,14 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     
   - [Flag 3 Screen Shot](../images/flag34-2.png), Flag3.txt: **flag3{afc01ab56b50591e7dccf93122770cd2}**
 
-    - Inspecting wp-config.php to look for root access to MySQL database
-    - `cat /var/www/html/wordpress/wp-config.php`
+    - Inspecting wp-config.php to look for root access password to MySQL database
+    - **`cat /var/www/html/wordpress/wp-config.php`**
 
     - Loging on to the MySQL server
-    - `mysql -u root -p`
+    - **`mysql -u root -p`**
 
-   - Inspecting MySQL tables  for flags
-    - `show databases;`
-    - `show tables`
-    - `select * from wp_posts;`
+    - Inspecting MySQL tables  for flags
+    - **`show databases;`**
+    - **`show tables`**
+    - **`select * from wp_posts;`**
 

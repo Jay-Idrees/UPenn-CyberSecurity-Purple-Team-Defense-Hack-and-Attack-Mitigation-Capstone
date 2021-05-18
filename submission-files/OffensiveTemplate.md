@@ -53,7 +53,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
       - Using gobuster to identify web directories and exploring them during scanning and enumeration 
       - **`gobuster -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium dir -e -u http://192.168.1.110 -x .php,txt,html`**
 
-      - Inspecting the source code for the service page and identified the flag in comments under the code for the html footer
+      - Upon inspection of the source code of service page flag1 was identified in comments under the code for the html footer
 
   - [Flag 2 Screen Shot](../images/flag2.png), `Flag2.txt`: **flag2{fc3fd58dcdad9ab23faca6e9a36e581c}**
 

@@ -9,7 +9,6 @@ You must inspect your traffic capture to answer the following questions:
 
 > Answer: Youtube.com
 
-
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
 > Answer: 10.6.12.0/24

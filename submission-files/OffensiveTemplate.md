@@ -23,7 +23,7 @@ This scan identifies the services below as potential points of entry:
 
 - Open port 22 dedicated to SSH services
 - Open port 80 dedicated to HTTP services
-- Apache http version 2.4.1.0
+- Apache http version 2.4.1.0 running on the open port 22
 - OS version Windows 6.1 (Smba 4.2)
 
 
@@ -82,4 +82,12 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     - **`show databases;`**
     - **`show tables`**
     - **`select * from wp_posts;`**
+
+  - [Flag 4 Screen Shot](../images/flag4.png), Flag4.txt: **flag4{715dea6c055b9fe3337544932f2941ce}**
+    - The hashes found in the MySQL table using **`select * from wp_users;`** are used to identify the password for Steven
+    - Steven's account needed to be used as Michal's accound did not have write privilidges or for `sudo` privilidges to execute python code
+    - **`ssh steven@192.168.1.10`** is used to connect to Target 1 via Steven's credentials
+
+    - The code below is esclates to root privilidges and flag 4 was found inside the root directory
+    - `sudo python -c 'import pty;pty.spawn("/bin/bash");'`
 

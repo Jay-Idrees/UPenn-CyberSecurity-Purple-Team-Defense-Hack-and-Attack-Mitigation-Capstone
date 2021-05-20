@@ -29,16 +29,6 @@ This scan identifies the services below as potential points of entry:
 
   
 
-_TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
-
-The following vulnerabilities were identified on each target:
-- Target 1
-  - List of
-  - Critical
-  - Vulnerabilities
-
-_TODO: Include vulnerability scan results to prove the identified vulnerabilities._
-
 ### Exploitation
 
 

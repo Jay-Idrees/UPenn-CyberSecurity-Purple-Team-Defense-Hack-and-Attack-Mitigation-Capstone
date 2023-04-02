@@ -1,6 +1,13 @@
 
 ![](images/intro.png)
 
+Jay J. Idrees, M.D., M.P.H., S.Eng., C.E.H <br />
+Full-Stack Software Engineer<br />
+[Jay-Idrees](https://github.com/Jay-Idrees) ![Github](http://img.shields.io/badge/github-black?style=flat&logo=github)<br />
+
+E-mail: Dr.Idrees@MedicalMarijuana.Expert
+
+
 ## Executive Summary
 
 - This project is about a **Network** consisting of two servers, a penetration testing Kali VM and an ELK stack server. In addition there is also a capstone machine that is used to test for alerts. The Network architechture is presented below:
